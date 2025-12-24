@@ -13,7 +13,9 @@ async function bootstrap() {
     origin: [
       'http://localhost:8000',
       'https://frontend-ashen-gamma-48.vercel.app',
-      'https://real-time-comment-frontend-eight.vercel.app'
+      'https://real-time-comment-frontend-eight.vercel.app',
+      'https://real-time-comment-frontend.vercel.app',
+      'https://real-time-comment-frontend-5iug7kt9y-jameels-projects-8c36dc76.vercel.app'
     ],
     methods: ['GET', 'POST'],
     credentials: true
