@@ -10,8 +10,13 @@ import { Comment } from './comment.interface';
 
 @WebSocketGateway({
   cors: {
-    origin: 'http://localhost:8000',
+    origin: [
+      'http://localhost:8000',
+      'https://frontend-ashen-gamma-48.vercel.app',
+      'https://real-time-comment-frontend-eight.vercel.app'
+    ],
     methods: ['GET', 'POST'],
+    credentials: true
   },
 })
 export class CommentsGateway {
