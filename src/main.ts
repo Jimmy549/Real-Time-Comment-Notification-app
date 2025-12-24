@@ -3,6 +3,12 @@ import { AppModule } from './app.module';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
+  
+  // Add a simple health check route
+  app.getHttpAdapter().get('/', (req, res) => {
+    res.json({ message: 'Real-Time Comment System Backend is running!', status: 'OK' });
+  });
+  
   app.enableCors({
     origin: [
       'http://localhost:8000',
